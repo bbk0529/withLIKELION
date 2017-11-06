@@ -7,6 +7,8 @@ require 'nokogiri'
 uri = "http://info.finance.naver.com/marketindex/?tabSel=gold#tab_section"
 response = HTTParty.get(uri)  #By HTTParty,getting information from URL
 text = Nokogiri::HTML(response.body)  #Nokogiri to parse information for better search
+# Nokogiri ::XML - XML 을 
+
 kospi=text.css('#content > div:nth-child(3) > table > tbody > tr:nth-child(1) > td:nth-child(3)') #.css, selector is chosen. 
 puts kospi.text #.text for getting information within <tag>
 

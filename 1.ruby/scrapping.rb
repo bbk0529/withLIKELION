@@ -12,4 +12,3 @@ text = Nokogiri::HTML(response.body)
 kospi=text.css('#KOSPI_now')
 #원하는 정보만 뽑아서
 puts kospi.text
-
